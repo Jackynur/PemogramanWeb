@@ -1,0 +1,29 @@
+table{
+    border: 1px solid #000;
+}
+
+th{
+    border: 1px solid #000;
+    background-color: yellow;
+}
+
+td{
+    border: 1px solid #000;
+}
+
+.Blue{
+    background-color: mediumturquoise;
+    font-weight: bold;
+}
+
+.Black{
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+}
+
+.Pink{
+    background-color: pink;
+    font-weight: bold;
+}
+

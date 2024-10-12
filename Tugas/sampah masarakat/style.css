@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+.nav-container {
+  background-color: #05b782;
+  display: flex;
+  align-items: center;
+  padding: 10px 30px;
+  justify-content: space-between;
+  
+}
+
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    
+}
+
+nav ul {
+    list-style: none;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex: 1 ;
+    align-items: center;
+}
+
+nav ul li{
+    display: inline-block;
+}
+
+nav ul li a { 
+    padding: 20px 15px;
+    text-decoration: none;
+    color:#ffffff;
+}
+
+.logo {
+    margin-left: 10px;
+    display: flex;
+    justify-content: flex-start
+}
+
+.nav-button a {
+    display: flex;
+    color: white;
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+.Home-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 85vh;
+    padding: 30 50px;
+}
+
+.selamat-datang {
+    max-width: 50%;
+}
+
+.selamat-datang h1 {
+    font-size: 36px;
+    color: #000;
+}
+
+.selamat-datang p {
+    margin: 20px 0;
+    font-size: 18px;
+    color: #555;
+}
+
+.btn-masuk {
+    background-color: #00b386;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-masuk:hover {
+    background-color: #009973;
+    transform: scale(1.1);
+    animation: bounce 0.5s;
+}
+
+.image-section img {
+    width: 550px;
+    height: auto;
+}
+
+.profile-container {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 22px;
+    text-align: center;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 1px 1px 12px #00b386;
+}
+
+.profile-container h1 {
+    font-size: 34px;
+    color: #00b386;
+    margin-bottom: 20px;
+}
+
+.profile-container p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.feature-container {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.feature-container h2 {
+    font-size: 28px;
+    color: #00b386;
+    margin-bottom: 30px;
+}
+
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.feature {
+    text-align: center;
+    max-width: 200px;
+}
+
+.feature img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 16px;
+    color: #666;
+}
+
+.footer {
+    background-color: #00a86b;
+    color: white;
+    padding: 20px 50px;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.footer-column {
+    flex: 1;
+    padding-right: 20px;
+}
+.footer-column h3 {
+    margin-top: 0;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+}
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+.search-box input {
+    border: none;
+    background: transparent;
+    margin-left: 5px;
+    outline: none;
+}
+.search-box img {
+    width: 20px;
+    height: 20px;
+}
+.footer-bottom {
+    text-align: center;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 15px;
+}
+
+.footer-bottom a {
+    color: white;
+    text-decoration: none;
+}
+
+.sosial-logo {
+    display: flex;
+    gap: 15px;
+}
+
+.sosial-logo a {
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.sosial-logo a:hover {
+    color: #ddd;
+}
+
