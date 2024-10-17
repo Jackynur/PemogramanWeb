@@ -1,3 +1,10 @@
+html {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+
 body {
     display: flex;
     justify-content: center;
@@ -9,7 +16,8 @@ body {
 }
 
 .calculator {
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
     padding: 40px;
     background-color: #81a48c;
     border-radius: 20px;
