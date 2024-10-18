@@ -56,3 +56,17 @@ button {
 button:hover {
     background-color: #555;
 }
+
+@media (max-width: 768px) {
+   .buttons {
+        display: flex;
+        flex-wrap: wrap;
+}
+    body{
+        height: auto;
+    }
+
+    .calculator {
+        height: 100%;
+    }
+}
