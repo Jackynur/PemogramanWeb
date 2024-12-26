@@ -1,0 +1,75 @@
+<?php
+
+namespace app\Controller;
+
+include "app/Traits/ApiResponseFormatter.php";
+include "app/Models/Product.php";
+
+use app\Models\Product;
+use app\Traits\ApiResponseFormatter;
+
+class ProductController
+{
+    use ApiResponseFormatter;
+
+    public function index()
+    {
+        $productModel = new Product();
+        $response = $productModel->findAll();
+        return $this->apiResponse(200, "Success", $response);
+    }
+
+    public function getByName($name)
+    {
+        $productModel = new Product();
+        $response = $productModel->findByName($name);
+
+        if (empty($response)) {
+            return $this->apiResponse(404, "Produk tidak ditemukan", []);
+        }
+
+        return $this->apiResponse(200, "Success", $response);
+    }
+
+    public function insert()
+    {
+        $jsonInput = file_get_contents('php://input');
+        $inputData = json_decode($jsonInput, true);
+
+        if (json_last_error()){
+            return $this->apiResponse(400, "Error invalid input", null);
+        }
+
+        $productModel = new Product();
+        $response = $productModel->create([
+            "product_name"=> $inputData['product_name']
+
+        ]);
+
+        return $this->apiResponse(200, "Success", $response);
+    }
+
+    public function update($id)
+    {
+        $jsonInput = file_get_contents('php://input');
+        $inputData = json_decode($jsonInput, true);
+        if (json_last_error()){
+            return $this->apiResponse(400, "Error invalid input", null);
+        }
+
+        $productModel = new Product();
+        $response = $productModel->update([
+            "product_name" => $inputData['product_name'],
+        ], $id);
+
+        return $this->apiResponse(200, "Success", $response);
+    }
+
+    public function delete($id)
+    {
+        $productModel = new Product();
+        $response = $productModel->delete($id);
+
+        return $this->apiResponse(200, "Success", $response);
+    }
+}

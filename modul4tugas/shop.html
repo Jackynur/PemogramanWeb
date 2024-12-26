@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Produk</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Daftar Produk</h1>
+    </header>
+    <main>
+        <section>
+            <div class="controls">
+                <button id="addProductButton">Tambah Produk</button>
+                <input type="text" id="searchInput" placeholder="Cari produk..." />
+                <button id="searchButton">Cari</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nama Produk</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="productTable">
+                    <!-- Data akan dimuat di sini -->
+                </tbody>
+            </table>
+        </section>
+        <section id="productFormSection" style="display: none;">
+            <h2 id="formTitle">Tambah Produk</h2>
+            <form id="productForm">
+                <input type="hidden" id="productId">
+                <label for="productName">Nama Produk:</label>
+                <input type="text" id="productName" required>
+                <button type="submit">Simpan</button>
+                <button type="button" id="cancelButton">Batal</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
